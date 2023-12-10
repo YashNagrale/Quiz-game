@@ -50,7 +50,7 @@ body {
 .head span {
     color: transparent;
     background: linear-gradient(#68008c, #ba56df, #ae33d9, #2f0b3b);
-    -webkit-background-clip: text;
+      -webkit-background-clip: text;
 }
 
 .aside {
@@ -91,7 +91,7 @@ body {
     width: 67rem;
     /* height: 50rem; */
     /* padding-right: 20rem; */
-    background: url("Aside-img.webp");
+    background: url("aside-img.webp");
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -239,7 +239,7 @@ input[type="radio"]:checked ::before{
         left: 0;
         width: 100%;
         height: 100%;
-        background: url("Aside-img.webp");
+        background: url("aside-img.webp");
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;

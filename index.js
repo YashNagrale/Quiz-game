@@ -1,4 +1,3 @@
-
 //For registration Form
 function regisfunc() {
     let name = document.getElementById("studentName").value;
@@ -9,29 +8,21 @@ function regisfunc() {
     if (name.trim() !== "" && id.trim() !== "") {
         if (!testname && (id <= 0 || isNaN(id))) {
             document.getElementById("submitButtonLink").href = "#";
-            alert("Please enter a valid Name and valid ID");
+            alert("Please enter a valid Name and a valid ID ");
         } else if (!testname) {
             document.getElementById("submitButtonLink").href = "#";
-            alert("Please enter a valid name");
+            alert("Please enter a valid Name (only alphabetic characters are allowed).");
         } else if (id <= 0 || isNaN(id)) {
             document.getElementById("submitButtonLink").href = "#";
             alert("Please enter a valid ID");
         } else {
             window.location.href = "quiz.html";
         }
-    } else if (name.trim() === "") {
-        document.getElementById("submitButtonLink").href = "#";
-        alert("Please enter a valid Name");
-    } else if (id.trim() === "") {
-        document.getElementById("submitButtonLink").href = "#";
-        alert("Please enter a valid ID");
     } else {
         document.getElementById("submitButtonLink").href = "#";
         alert("Please fill out both fields before submitting.");
     }
 }
-
-
 // Type animation
 let typed = new Typed('#element', {
     strings: ['Short Quiz Test'],

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Quizlogo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="quizlogo.webp" type="x-icon">
     <title>Register - Short quiz test</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -23,16 +23,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background: url("formbg.webp");
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
+            height: 100vh;
+            overflow: hidden;
         }
 
         form {
             width: 30rem;
-            height: 30rem;
+            height: 35rem;
             padding: 2rem;
             border-radius: .8rem;
             /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
@@ -98,47 +99,49 @@
 
         }
 
+        .info {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #767575;
+            padding: 2rem 0.2rem;
+        }
+
         /* Screen responsive */
         @media (max-width:600px) {
             html {
-            font-size: 50%;
+                font-size: 50%;
 
+            }
         }
-        body{
-            height: 91.4rem;
-        }
-        }
+
         @media (max-width:300px) {
             html {
-            font-size: 35%;
+                font-size: 35%;
 
+            }
         }
-        body{
-            height: 91.4rem;
-        }
-        }
+
         @media (max-width:200px) {
             html {
-            font-size: 15%;
+                font-size: 15%;
 
-        }
-        body{
-            height: 91.4rem;
-        }
+            }
         }
     </style>
 </head>
 
 <body>
     <form>
-        <img src="Quizlogo.webp" alt="">
+        <img src="quizlogo.webp" alt="">
         <label for="studentName">Student's Name:</label>
         <input type="text" placeholder="Enter Name" id="studentName" name="studentName" required>
 
         <label for="studentID">Student's ID:</label>
         <input type="number" placeholder="Enter Id" id="studentID" name="studentID" required>
 
-        <button id="redirectbtn" onclick="regisfunc()" type="button"><a id="submitButtonLink" href="quiz.html">Register</a></button>
+        <button id="redirectbtn" onclick="regisfunc()" type="button"><a id="submitButtonLink"
+                href="quiz.html">Register</a></button>
+        <p class="info">By registering you will automatically redirect to website.</p>
     </form>
     <script src="index.js"></script>
 </body>
