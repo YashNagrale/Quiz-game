@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --border-bottom-color: #151b45;
+}
+
+::-webkit-scrollbar {
+    width: .62rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #838383;
+    border-radius: 1rem;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas: 'header header ' 'aside sideimg' 'main main' 'submit submit' 'foot foot';
+}
+
+.head {
+    grid-area: header;
+    font-size: 5rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
+}
+
+.head .logo {
+    width: 7rem;
+    margin-bottom: -0.7rem;
+}
+
+.head span {
+    color: transparent;
+    background: linear-gradient(#68008c, #ba56df, #ae33d9, #2f0b3b);
+    -webkit-background-clip: text;
+}
+
+.aside {
+    grid-area: aside;
+    padding: 5rem 0rem;
+    padding-left: 6rem;
+    /* height: 50vh; */
+    /* height:40rem ; */
+    /* border-bottom: .5rem solid var(--border-bottom-color); */
+    /* max-width: 62rem; */
+    /* width: 100%; */
+    /* width: 100%; */
+
+    /* background-color: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(3px); */
+
+}
+
+.aside h1 {
+    font-size: 3rem;
+}
+
+.aside ul {
+    font-size: 2.1rem;
+    margin-top: 2.2rem;
+}
+
+.aside ul li {
+    color: gray;
+    font-weight: 600;
+    margin: 0.7rem 0rem;
+}
+
+.aside-img {
+    grid-area: sideimg;
+    /* border-bottom: .5rem solid var(--border-bottom-color); */
+    /* width: 67rem; */
+    width: 67rem;
+    /* height: 50rem; */
+    /* padding-right: 20rem; */
+    background: url("Aside-img.webp");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main {
+    grid-area: main;
+    /* width: calc(100vw - 44.149vw); */
+    /* width: calc(100vw - 42.149vw); */
+    /* background-color: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(3px); */
+    overflow-y: scroll;
+    /* height: 78.57vh; */
+    height: 60rem;
+    border-top: .5rem solid var(--border-bottom-color);
+    border-bottom: .5rem solid var(--border-bottom-color);
+
+
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.main h1 {
+    padding: 2rem 0rem;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
+
+/*From CSS Starts here*/
+
+form .que-para {
+    font-size: 2.3rem;
+    padding-bottom: .6rem;
+}
+
+form .p-input {
+    font-size: 2rem;
+    margin: .3rem 0;
+    /* width: 87px; */
+    width: 130px;
+}
+
+label {
+    display: block;
+    width: 87px;
+}
+
+.questions {
+    margin: 1rem 5rem;
+    width: 50rem;
+}
+
+input[type="radio"]:checked ::before{
+    background-color: red;
+}
+
+.submit {
+    grid-area: submit;
+    display: flex;
+    padding: 3rem 0;
+    justify-content: space-evenly;
+}
+
+.submit h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.submit button {
+    background: linear-gradient(rgb(70, 38, 167), rgb(41 23 142));
+    color: white;
+    width: 17rem;
+    padding: 0.6rem 0;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: .14s;
+}
+
+.submit button:hover {
+    /* background: linear-gradient(rgb(73, 27, 124)rgb(35, 20, 120)2); */
+    transform: scale(1.07);
+
+}
+
+.foot {
+    grid-area: foot;
+    font-size: 1.3rem;
+    text-align: center;
+    background: rgb(12, 12, 12);
+}
+
+
+@media(max-width:1210px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .aside-img {
+        width: 67rem;
+    }
+}
+
+@media(max-width:1210px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media(max-width:969px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media(max-width:862px) {
+
+    html {
+        font-size: 40%;
+    }
+}
+
+@media(max-width:896px) {
+
+    html {
+        font-size: 40%;
+    }
+
+    .container {
+        grid-template-areas: 'header header' 'aside aside' 'main main' 'submit submit' 'foot foot';
+
+    }
+
+    .aside::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("Aside-img.webp");
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        opacity: .4;
+
+    }
+
+    .aside ul li {
+        color: rgb(98, 96, 96);
+    }
+
+    .aside-img {
+        display: none;
+    }
+
+    .submit button{
+        width: 25rem;
+        padding: 1rem 0;
+        border: none;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+}
+
+@media(max-width:815px) {
+
+    html {
+        font-size: 38%;
+    }
+
+    .submit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: submit;
+    }
+    
+}
+
+@media(max-width:623px) {
+
+    html {
+        font-size: 37%;
+    }
+
+    .submit button {
+        margin-top: 12px;
+    }
+
+    .aside ul li {
+        color: rgb(146, 146, 146);
+    }
+}
+
+@media(max-width:500px) {
+
+    html {
+        font-size: 35%;
+    }
+
+    .head {
+        font-size: 5rem;
+    }
+
+    input[type="radio"] {
+        width: 2.1rem;
+        margin-right: 1rem;
+    }
+
+    form .p-input {
+        font-size: 2rem;
+        margin: .3rem 0;
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media(max-width:450px) {
+
+    html {
+        font-size: 34%;
+    }
+
+    .head {
+        text-align: center;
+    }
+}
